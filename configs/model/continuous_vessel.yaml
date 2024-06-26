@@ -1,0 +1,16 @@
+# Model settings
+type: 'continuous'
+transition: 'uniform'                          # uniform or marginal
+model: 'cont_graph_tf'
+diffusion_steps: 1000
+diffusion_noise_schedule: 'cosine'              # 'cosine', 'linear'
+n_layers: 8
+
+extra_features: null        # 'all', 'cycles', 'eigenvalues' or null
+
+hidden_mlp_dims: {'X': 128, 'E': 64, 'y': 64, 'pos': 256}
+hidden_dims : {'dx': 128, 'de': 128, 'dy': 64, 'n_head': 8, 'dim_ffX': 128, 'dim_ffE': 128, 'dim_ffy': 64}
+
+diff_1_config: {'n_layers': 4, hidden_dim: 256}
+
+

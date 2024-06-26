@@ -1,0 +1,14 @@
+defaults:
+    - _self_
+    - general : general_default
+    - model : discrete_vessap
+    - train : train_default
+    - dataset : vessel
+
+
+hydra:
+  job:
+    chdir: True
+  run:
+    dir: ./outputs/vessap${now:%Y-%m-%d}/${now:%H-%M-%S}-${general.name}
+

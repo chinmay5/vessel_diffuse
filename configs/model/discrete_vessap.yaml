@@ -1,0 +1,28 @@
+# Model settings
+type: 'discrete'
+transition: 'marginal'                          # uniform or marginal
+model: 'graph_tf'
+diffusion_steps: 500
+diffusion_noise_schedule: 'cosine'              # 'cosine', 'linear'
+n_layers: 2
+
+extra_features: null        # 'all', 'cycles', 'eigenvalues' or null
+
+hidden_mlp_dims: {'X': 128, 'E': 64, 'y': 64, 'pos': 256}
+hidden_dims : {'dx': 128, 'de': 128, 'dy': 64, 'n_head': 8, 'dim_ffX': 128, 'dim_ffE': 128, 'dim_ffy': 64}
+
+# pos, X, angles, E, y, degree
+lambda_train: [0, 0, 0, 1, 0, 1]
+diff_1_config: {'n_layers': 4, hidden_dim: 256}
+
+nu:
+  p: 1 # earlier 1; 1.5
+  x: 1
+  c: 1
+  e: 1 # earlier 1; 1.5
+  y: 1
+
+deg_loss: False
+is_equivariant: True
+
+

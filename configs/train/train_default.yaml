@@ -1,0 +1,15 @@
+# Training settings
+n_epochs: 2000  #1000
+
+batch_size: 64 # 512
+reference_batch_size: 300
+lr: 0.0003
+clip_grad: null          # float, null to disable
+save_model: True
+num_workers: 0
+ema_decay: 0           # 'Amount of EMA decay, 0 means off. A reasonable value  is 0.999.'
+progress_bar: false
+weight_decay: 1e-5
+scheduler: null #
+seed: 42
+node_increase: 0  # If we want to artificially increase the number of sampled nodes

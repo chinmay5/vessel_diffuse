@@ -1,0 +1,14 @@
+defaults:
+    - _self_
+    - general : general_default
+    - model : discrete_cow
+    - train : train_default
+    - dataset : cow  # top_cow
+
+
+hydra:
+  job:
+    chdir: True
+  run:
+    dir: ./outputs/cow_multi_more_data${now:%Y-%m-%d}/${now:%H-%M-%S}-${general.name}
+

@@ -1,0 +1,14 @@
+defaults:
+    - _self_
+    - general : general_default
+    - model : continuous_vessel
+    - train : train_default
+    - dataset : cow
+
+
+hydra:
+  job:
+    chdir: True
+  run:
+    dir: ./outputs/cont_${now:%Y-%m-%d}/${now:%H-%M-%S}-${general.name}
+

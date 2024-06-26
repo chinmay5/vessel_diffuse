@@ -1,0 +1,7 @@
+name: 'cow'
+datadir: 'data/cow/pt_files'
+pin_memory: True
+adaptive_loader: False
+is_directed: False
+is_multiclass: True  # True for multi-class generation
+node_jitter: True  # Turns off node position augmentation for node diffusion

@@ -1,0 +1,29 @@
+# General settings
+name: 'graph-vessel-model'                   # Warning: 'debug' and 'test' are reserved name that have a special behavior
+
+wandb: 'disabled'                # online | offline | disabled
+gpus: 1                     # Multi-gpu is currently not implemented
+
+resume: null          # If resume, path to ckpt file from outputs directory in main directory
+test_only: null       # Use absolute path
+
+check_val_every_n_epochs: 10
+sample_every_val: 500
+val_check_interval: null
+samples_to_generate: 64
+samples_to_save: 1  # The saving takes a long time.
+chains_to_save: 1
+log_every_steps: 50
+number_chain_steps: 50        # Number of frames in each gif
+
+faster_sampling: 1                              # At each sampling step, set s=t-faster sampling (1 for normal sampling)
+
+final_model_samples_to_generate: 128 #10000
+final_model_samples_to_save: 128 #10
+final_model_chains_to_save: 1 # 5
+
+cpus_per_gpu: 8
+force_ray: false
+
+evaluate_all_checkpoints: False
+num_final_sampling: 1 # 5
